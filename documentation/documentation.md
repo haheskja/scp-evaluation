@@ -39,7 +39,7 @@ And lastly, if you are part of the maintainer team and want to learn about the v
 
 ## 2. Publishing your package 
 
-We assume you already have a package with reusable components that you want to publish on NPM and make visible on SCP website. 
+We assume you already have a package with reusable components that you want to publish on NPM and make visible on [SCP website](https://dhis2designlab.github.io/scp-website/). 
 However if you do not know how to create and publish such a package, you can read more about it [here](https://dev.to/ramonak/how-to-publish-a-custom-react-component-to-npm-using-create-react-library-4bhi).
 
 To make your package searchable on [SCP website](https://dhis2designlab.github.io/scp-website/), two
