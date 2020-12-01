@@ -33,8 +33,9 @@ Apply for the package quality assurance in [the SCP whitelist repository](https:
 
 If you want to publish your package with components for further reuse, proceed to the section __2. Publishing your package__.
 If you want to verify your package locally, check the section __3. Verifying your package locally__.
-If you are here to learn how to find components, look at the section __4. Finding reusable components__.
-And lastly, if you are part of the maintainer team and want to learn about the verification workflow, proceed to the section __5. Maintaining package verification workflow__. 
+If you want to apply for package verification, see the section __4. Applying for package verification__.
+If you are here to learn how to find components, look at the section __5. Finding reusable components__.
+And lastly, if you are part of the maintainer team and want to learn about the verification workflow, proceed to the section __6. Maintaining package verification workflow__. 
 
 ## 2. Publishing your package 
 
@@ -155,7 +156,7 @@ The verification workflow:
 * Runs [npm audit](https://docs.npmjs.com/cli/v6/commands/npm-audit)
 
 
-## 4. Finding reusable components
+## 5. Finding reusable components
 
 [SCP website](https://dhis2designlab.github.io/scp-website/) provides necessary functionality for finding reusable components within NPM packages. It fetches and lists all the exported components within NPM packages that contain the `dhis2-component-search` keyword in `package.json` file.
 
@@ -182,7 +183,7 @@ Each component is represented by a component card that contains the following in
 ![GitHub Logo](https://i.imgur.com/d8qM2K2.jpg)
 
 
-## 5. Maintaining package verification workflow
+## 6. Maintaining package verification workflow
 
 [DHIS2 SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) contains a list of verified NPM packages. Pull requests to this repository will be validated with a GitHub actions workflow.
 
@@ -192,7 +193,7 @@ The user submits his package for verification by modifying [`list.csv`](https://
 
 The verification workflow:
 
-* Checks for verification prerequisites defined in section 3.1 Verification prerequisites
+* Checks for verification prerequisites defined in section __3.1 Verification prerequisites__
 * Lints the code [ESLint](https://www.npmjs.com/package/eslint)
 * Runs [npm audit](https://docs.npmjs.com/cli/v6/commands/npm-audit)
 
