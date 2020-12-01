@@ -38,6 +38,17 @@ And lastly, if you are part of the maintainer team and want to learn about the v
 
 ## 2. Publishing your package 
 
+We assume you already have a package with reusable components that you want to publish on NPM and make visible on SCP website. 
+However if you do not know how to create and publish such a package, you can read more about it [here](https://dev.to/ramonak/how-to-publish-a-custom-react-component-to-npm-using-create-react-library-4bhi).
+
+To make your package searchable on [SCP website](https://dhis2designlab.github.io/scp-website/), two
+conditions must be met:
+
+* Your `package.json` file must include `dhis2-component-search` keyword. (see section __3.1.1 Keyword__)
+* Your `package.json` file must include `dhis2ComponentSearch` property with correct values and structure (see section __3.1.3 The `dhis2ComponentSearch` property__).
+
+However, there are more conditions that must be met if you plan to submit your package for verification and pre-verify it locally. If this is the case, read the section __3. Verifying your package locally__ and __4. Applying for package verification__.
+
 ## 3. Verifying your package locally
 
 [SCP command line interface](https://github.com/dhis2designlab/scp-cli) helps you to create NPM packages with React components that can be used to build DHIS2 apps or other components.
