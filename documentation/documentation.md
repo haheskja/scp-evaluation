@@ -1,41 +1,57 @@
-# DHIS2 SCP Documentation
-##### Documentation for DHIS2 Shared Component platform website and command line interface
+# DHIS2 Shared Component Platform (SCP) Documentation
+##### Documentation for DHIS2 Shared Component platform website, SCP command line interface and SCP Whitelist repository
 
 ## 1. About DHIS2 Shared Component Platform (DHIS2 SCP)
 
-DHIS2 Shared Component platform is a platform for sharing and reuse of software components created by HISP community. It consists of three distinct modules:
+DHIS2 Shared Component platform is a platform for sharing and reuse of software components created by HISP community. Reusable components are basically a pre-built React/Angular UI components and can be used as building blocks for a web application.
+
+__Why do we need reusable components?__
+* More effective development of Front end web application
+* Consistency in web applications
+* Smaller code base to maintain
+
+__What characterizes reusable components?__
+* Easy plug-able components
+* Can be published directly to [NPM](https://www.npmjs.com)
+* Extendable template
+* Web-browser independent
+
+Some of the examples of reusable component libraries: [Material UI](https://material-ui.com), [Dhis2/ui](https://github.com/dhis2/ui), [Semantic UI](https://www.npmjs.com/package/semantic-ui).
+
+
+ DHIS2 Shared Component Platform consists of three distinct modules:
 
 * [SCP website](https://dhis2designlab.github.io/scp-website/) 
-* The SCP command line interface
-* [The SCP whitelist](https://github.com/dhis2designlab/scp-whitelist) Github repository
+* [SCP command line interface](https://github.com/dhis2designlab/scp-cli)
+* [SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist)
 
 Use the [SCP website](https://dhis2designlab.github.io/scp-website/) to discover components within packages.
 Run the SCP CLI from the terminal to check if your package is set up properly, so that your components become discoverable on the [SCP website](https://dhis2designlab.github.io/scp-website/).
-Apply for the package quality assurance in [the SCP whitelist](https://github.com/dhis2designlab/scp-whitelist) repository and let your package be assessed by the team of maintainers.
+Apply for the package quality assurance in [the SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) and let your package be assessed by the team of maintainers.
 
 ## 1.2 Getting started
 
-If you want to publish your package with reusable components, proceed to the section 2. Publishing your package.
-If you want to verify your package locally, check the section 3. Verifying your package locally.
-If you are here to learn how to find components, look at the section 4. Finding reusable components
-And lastly, if you are part of the maintainer team and want to learn about the verification workflow, proceed to the section 5. Maintaining package verification workflow. 
+If you want to publish your package with components for further reuse, proceed to the section __2. Publishing your package__.
+If you want to verify your package locally, check the section __3. Verifying your package locally__.
+If you are here to learn how to find components, look at the section __4. Finding reusable components__.
+And lastly, if you are part of the maintainer team and want to learn about the verification workflow, proceed to the section __5. Maintaining package verification workflow__. 
 
 ## 2. Publishing your package 
 
 ## 3. Verifying your package locally
 
-SCP CLI package helps you to create NPM packages with React components that can be used to build DHIS2 apps or other components.
+[SCP command line interface](https://github.com/dhis2designlab/scp-cli) helps you to create NPM packages with React components that can be used to build DHIS2 apps or other components.
 
 This package provides a command line interface `dhis2-scp-cli` with various commands.
 
-* `dhis2-scp-cli verify`: This command will check the quality of your npm package.
+* `dhis2-scp-cli verify`: This command will check the quality of your NPM package.
 
 The command will do the following:
 
-* Verify that the package's `package.json` has the `dhis2-component-search` keyword (see section 1.1).
-* Verify that the package's `package.json` has the `dhis2ComponentSearch` property with correct values and structure (see section 1.3).
-* Verify that the package passes an `npm audit` check.
-* Verify that the package passes an `eslint` check.
+* Verify that the package's `package.json` has the `dhis2-component-search` keyword (see section 3.1.1).
+* Verify that the package's `package.json` has the `dhis2ComponentSearch` property with correct values and structure (see section 3.1.3).
+* Verify that the package passes an `npm audit` check. (See [npm audit](https://docs.npmjs.com/cli/v6/commands/npm-audit))
+* Verify that the package passes an `eslint` check. (See [ESLint](https://www.npmjs.com/package/eslint))
 
 ## 3.1 Verification prerequisites
 
@@ -70,7 +86,7 @@ The URL should be a publicly available and you must specify the repository type 
 
 ### 3.1.3 The `dhis2ComponentSearch` property
 
-The `dhis2ComponentSearch` property of a `package.json` file includes the information about the package that is relevant to The Shared Component Platform and its search functionality.
+The `dhis2ComponentSearch` property of a `package.json` file includes the information about the package that is relevant to SCP and its search functionality.
 
 The `dhis2ComponentSearch` property must include key/value pairs for framework (using `language` key, we currently support `react` and `angular`), and components. The `component` property, in turn, takes an array of component objects. Each component object must include following information defined as key/value pairs:
 
@@ -117,29 +133,29 @@ Your package must be published on [NPM](https://www.npmjs.com) and have a public
 
 ## 4. Applying for package verification 
 
-[DHIS2 SCP Whitelist](https://github.com/dhis2designlab/scp-whitelist) repository contains a list of verified NPM packages. Pull requests to this repository will be validated with a GitHub actions workflow.
+[DHIS2 SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) contains a list of verified NPM packages. Pull requests to this repository will be validated with a GitHub actions workflow.
 
- To submit your package for verification you would need to modify [`list.csv`](https://github.com/dhis2designlab/scp-whitelist/blob/main/list.csv) file by adding a new line containing your npm package `identifier`and its `version` separated by a comma, e.g. `lodash,4.17.14`. Since you do not have a write access to the repository, a change in this file will write it to a new branch in your fork, so you can make a pull request. Fill in a title and description and create your pull request, which in turn, will trigger the verification workflow on your package.
+ If you want your package verified and added to the list of verified packages, you need to submit your package for verification. For that you would need to modify [`list.csv`](https://github.com/dhis2designlab/scp-whitelist/blob/main/list.csv) file by adding a new line containing your NPM package `identifier`and its `version` separated by a comma, e.g. `lodash,4.17.14`. Since you do not have a write access to the repository, a change in this file will write it to a new branch in your fork, so you can make a pull request. Fill in a title and description and create your pull request, which in turn, will trigger the verification workflow on your package.
 
 The verification workflow:
 
-* Checks for verification prerequisites defined in section 3.1 Verification prerequisites
+* Checks for verification prerequisites defined in section __3.1 Verification prerequisites__
 * Lints the code [ESLint](https://www.npmjs.com/package/eslint)
 * Runs [npm audit](https://docs.npmjs.com/cli/v6/commands/npm-audit)
 
 
 ## 4. Finding reusable components
 
-[SCP website](https://dhis2designlab.github.io/scp-website/) provides necessary functionality for finding reusable components within npm packages. It fetches and lists all the exported components within npm packages that contain the `dhis2-component-search` keyword in `package.json` file.
+[SCP website](https://dhis2designlab.github.io/scp-website/) provides necessary functionality for finding reusable components within NPM packages. It fetches and lists all the exported components within NPM packages that contain the `dhis2-component-search` keyword in `package.json` file.
 
 The website provides the following filters to narrow search result:
-* __Framework__ 
+* Framework
   * All: Shows all React and Angular components
   * React: Shows only React components
   * Angular: Shows only Angular components
 
-* __DHIS2 Version__ : allows filtering on supported DHIS2 version
-* __Show only verified components__: shows the components within the packages that have their latest version verified.
+* DHIS2 Version : allows filtering on supported DHIS2 version
+* Show only verified components: shows the components within the packages that have their latest version verified.
 
 Each component is represented by a component card that contains the following information:
 * Component name
@@ -157,11 +173,11 @@ Each component is represented by a component card that contains the following in
 
 ## 5. Maintaining package verification workflow
 
-[DHIS2 SCP Whitelist](https://github.com/dhis2designlab/scp-whitelist) repository contains a list of verified NPM packages. Pull requests to this repository will be validated with a GitHub actions workflow.
+[DHIS2 SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) contains a list of verified NPM packages. Pull requests to this repository will be validated with a GitHub actions workflow.
 
 If you are part of the [The SCP whitelist](https://github.com/dhis2designlab/scp-whitelist) maintaining team, you need to make sure you have the right access rights to be able to manage pull-requests. 
 
-The user submits his package for verification by modifying [`list.csv`](https://github.com/dhis2designlab/scp-whitelist/blob/main/list.csv) file, adding a new line containing your npm package `identifier`and its `version` separated by a comma, e.g. `lodash,4.17.14`.It will result in a pull-request that will trigger the automated verification workflow on the added package. 
+The user submits his package for verification by modifying [`list.csv`](https://github.com/dhis2designlab/scp-whitelist/blob/main/list.csv) file, adding a new line containing your NPM package `identifier`and its `version` separated by a comma, e.g. `lodash,4.17.14`.It will result in a pull-request that will trigger the automated verification workflow on the added package. 
 
 The verification workflow:
 
