@@ -56,6 +56,12 @@ When you have finished working on your `package.json` structure, you can proceed
 
 [SCP command line interface](https://github.com/dhis2designlab/scp-cli) helps you to create NPM packages with React components that can be used to build DHIS2 apps or other components.
 
+You can install the SCP CLI with the following command:
+
+```bash
+npm install -g https://github.com/haheskja/scp-cli#master
+```
+
 This package provides a command line interface `dhis2-scp-cli` with various commands.
 
 * `dhis2-scp-cli verify`: This command will check the quality of your NPM package.
@@ -66,6 +72,25 @@ The command will do the following:
 * Verify that the package's `package.json` has the `dhis2ComponentSearch` property with correct values and structure (see section 3.1.3).
 * Run `npm audit` check and output the result. (See [npm audit](https://docs.npmjs.com/cli/v6/commands/npm-audit))
 * Run `eslint` and output the result. (See [ESLint](https://www.npmjs.com/package/eslint))
+
+This command should be run inside the directory of your npm package.
+
+To see additional options for this command run `dhis2-scp-cli verify --help`. For verbose output run with `dhis2-scp-cli verify -vvv`.
+
+The SCP CLI also provides a command for verifying pull requests: `dhis2-scp-cli pr-verify`.
+
+This command can be used by component owners to check their pull requests, for example:
+
+```bash
+dhis2-scp-cli pr-verify --pull-request-url "https://api.github.com/repos/dhis2designlab/scp-whitelist/pulls/14"
+```
+
+It can also be used by component owners to check a specific package identifier and version without there being any pull request, for example:
+
+```bash
+dhis2-scp-cli pr-verify --fake-package-data "@dhis2/ui-core,5.7.3"
+```
+
 
 ## 3.1 Verification prerequisites
 
