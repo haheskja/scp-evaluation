@@ -50,6 +50,8 @@ conditions must be met:
 
 However, there are more conditions that must be met if you plan to submit your package for verification and pre-verify it locally. If this is the case, read the section __3. Verifying your package locally__ and __4. Applying for package verification__.
 
+When you have finished working on your `package.json` structure, you can proceed to publishing your package on NPM. 
+
 ## 3. Verifying your package locally
 
 [SCP command line interface](https://github.com/dhis2designlab/scp-cli) helps you to create NPM packages with React components that can be used to build DHIS2 apps or other components.
@@ -93,7 +95,7 @@ Inside your `package.json`it would look like this:
     }
 }
 ```
-The URL should be a publicly available and you must specify the repository type and url. Note that you cannot use shortcut syntax, e.g. `"repository": "github:user/repo"`.
+The URL should be a publicly available and you must specify the repository type and url. Note that you cannot use shortcut syntax, e.g. `"repository": "github:user/repo"`, and you must use `https://`.
 
 
 ### 3.1.3 The `dhis2ComponentSearch` property
