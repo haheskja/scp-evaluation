@@ -100,7 +100,7 @@ Your `package.json` file must include `dhis2-component-search` keyword as follow
 
 ```json
 {
-  "keyword": [
+  "keywords": [
       "dhis2-component-search"
   ]
 }
