@@ -21,7 +21,7 @@ Some of the examples of reusable component libraries: [Material UI](https://mate
 
  DHIS2 Shared Component Platform consists of three distinct modules:
 
-* [SCP website](https://dhis2designlab.github.io/scp-website/) 
+* [SCP website](https://github.com/dhis2designlab/scp-website) - hosted [here](https://dhis2designlab.github.io/scp-website/)
 * [SCP command line interface](https://github.com/dhis2designlab/scp-cli)
 * [SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist)
 
