@@ -3,7 +3,7 @@
 
 ## 1. About DHIS2 Shared Component Platform (DHIS2 SCP)
 
-DHIS2 Shared Component platform is a platform for sharing and reuse of software components created by HISP community. The components hosted on this platform are React or Angular UI components and can be used as building blocks for a web application.
+DHIS2 Shared Component platform is a platform for sharing and reuse of software components created by HISP community. The components hosted on this platform are React or Angular UI components and can be used as building blocks for a web application. The project has been conducted within the DHIS2 Design Lab in collaboration with members of the DHIS2 Core team and individuals from HISP groups. The project consisted of exploring solutions to make app development less resource-intensive by managing resources (components) made in the different HISP groups, thereby making them available for others to use.
 
 __Why do we need reusable components?__
 * More effective development of Front end web application
@@ -30,9 +30,9 @@ Run the [SCP command line interface](https://github.com/dhis2designlab/scp-cli) 
 Apply for the package quality assurance in [the SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) and let your package be assessed by the team of maintainers.
 
 ### Three different roles
-We refer to component owners, component consumers, and maintainers as three separate roles who interact with the platform in different ways.
-* Component owners: creates components and integrates them with the platform.
-* Component consumers: using components the component owners have published to the platform.
+We refer to component owners, component consumers, and maintainers as three separate roles who interact with the component platform in different ways.
+* Component owners: creates components and publishes them to the platform.
+* Component consumers: uses components the component owners have published to the platform.
 * Maintainers: maintains the whitelist of verified components.
 
 Keep in mind that none of these are mutually exclusive, as one person very well could have all of the roles.
