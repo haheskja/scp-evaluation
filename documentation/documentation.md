@@ -18,8 +18,9 @@ __What characterizes reusable components?__
 
 Some of the examples of reusable component libraries: [Material UI](https://material-ui.com), [Dhis2/ui](https://github.com/dhis2/ui), [Semantic UI](https://www.npmjs.com/package/semantic-ui).
 
+![](modules.png)
 
- DHIS2 Shared Component Platform consists of three distinct modules:
+DHIS2 Shared Component Platform consists of three distinct modules:
 
 * [SCP website](https://github.com/dhis2designlab/scp-website) - hosted [here](https://dhis2designlab.github.io/scp-website/)
 * [SCP command line interface](https://github.com/dhis2designlab/scp-cli)
@@ -35,7 +36,11 @@ We refer to component owners, component consumers, and maintainers as three sepa
 * Component consumers: uses components the component owners have published to the platform.
 * Maintainers: maintains the whitelist of verified components.
 
-Keep in mind that none of these are mutually exclusive, as one person very well could have all of the roles.
+Keep in mind that none of these are mutually exclusive, as one person very well could have all of the roles. The following figures show what modules each of the roles interact with. This shows that the whole package publishing process (that of the component owner) can be gone through by only interacting with npm, and that they can also use the CLI, Whitelist, etc., which can be recommended. For component consumers it shows that they must use the website to make use of the platform, while they can also use npmjs (the package are also there, but they won't be separated into components).
+
+![](componentowner.png)
+![](componentconsumer.png)
+![](maintainer.png)
 
 ## 1.2 Getting started
 
