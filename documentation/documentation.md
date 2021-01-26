@@ -160,10 +160,10 @@ Inside your `package.json`, the `dhis2ComponentSearch` property may look somethi
 }
 ```
 
-### 3.1.4 Components as commonJS modules
+### 3.1.4 Components as commonJS or ES modules
 
-Our verification process requires your components to be distributed as [commonJS modules](https://en.wikipedia.org/wiki/CommonJS). The command `npm install` should result in a valid commonJS module.
-One good way to achieve this is with the help of [create-react-library](https://www.npmjs.com/package/create-react-library) CLI, as it bundles `commonjs` and `es` module formats.
+Our verification process requires your components to be distributed as [commonJS modules](https://en.wikipedia.org/wiki/CommonJS) or [ES modules](https://en.wikipedia.org/wiki/ECMAScript). The command `npm install` should result in a valid module.
+One good way to achieve this is with the help of [@dhis2/cli-app-scripts](https://platform.dhis2.nu/#/), as it bundles `commonjs` and `es` module formats. A simple [boilerplate](https://github.com/haheskja/scp-react-boilerplate) can help you get started. Another good way is to build the library with [create-react-library](https://www.npmjs.com/package/create-react-library).
 
 ### 3.1.5 NPM and Github
 
