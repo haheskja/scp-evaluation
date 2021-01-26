@@ -29,6 +29,14 @@ Use the [SCP website](https://dhis2designlab.github.io/scp-website/) to discover
 Run the [SCP command line interface](https://github.com/dhis2designlab/scp-cli) from the terminal to check if your package is set up properly, so that your components become discoverable on the [SCP website](https://dhis2designlab.github.io/scp-website/).
 Apply for the package quality assurance in [the SCP whitelist repository](https://github.com/dhis2designlab/scp-whitelist) and let your package be assessed by the team of maintainers.
 
+### Three different roles
+We refer to component owners, component consumers, and maintainers as three separate roles who interact with the platform in different ways.
+* Component owners: creates components and integrates them with the platform.
+* Component consumers: using components the component owners have published to the platform.
+* Maintainers: maintains the whitelist of verified components.
+
+Keep in mind that none of these are mutually exclusive, as one person very well could have all of the roles.
+
 ## 1.2 Getting started
 
 If you want to publish your package with components for further reuse, see section __2. Publishing your package__.
